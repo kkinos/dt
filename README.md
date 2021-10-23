@@ -1,4 +1,4 @@
-# dt (Deepl Translation)
+# dt (DeepL Translation)
 
 ## Installing
 
