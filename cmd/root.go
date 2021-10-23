@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/kinpoko/dt/deepl"
 
 	"github.com/spf13/cobra"
@@ -17,8 +19,9 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
+		text := strings.Join(args, " ")
 
-		t, err := deepl.Translate(args[0], language, false)
+		t, err := deepl.Translate(text, language, false)
 		if err != nil {
 			return err
 		}
