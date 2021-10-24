@@ -12,7 +12,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "dt [text]",
 	Short: "Translate with deepl",
-	Long:  `A simple command line application to translate using deepl api.`,
+	Long:  `A simple command line application to translate using deepl API.`,
 
 	RunE: func(cmd *cobra.Command, args []string) error {
 		language, err := cmd.Flags().GetString("language")

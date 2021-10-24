@@ -1,5 +1,7 @@
 # dt (DeepL Translation)
 
+A simple command line application to translate using deepl API.
+
 ## Installing
 
 ```bash
