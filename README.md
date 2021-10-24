@@ -8,14 +8,16 @@ go get -u github.com/kinpoko/dt
 
 ## Usage
 
-1. Get authentication key for Deepl API
-2. Set the key as `DEEPL_TOKEN`
+1. Get authentication key for Deepl API. See [here](https://www.deepl.com/ja/docs-api/).
+2. Set the key as `DEEPL_TOKEN`.
+
+`.bashrc`
 
 ```bash
 export DEEPL_TOKEN=<authentication key>
 ```
 
-3. Translate
+3. Translate.
 
 ```bash
 dt Hello World
