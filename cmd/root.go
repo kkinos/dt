@@ -15,13 +15,19 @@ var rootCmd = &cobra.Command{
 	Long:  `A simple command line application to translate using deepl API.`,
 
 	RunE: func(cmd *cobra.Command, args []string) error {
-		language, err := cmd.Flags().GetString("language")
+		target_language, err := cmd.Flags().GetString("target")
 		if err != nil {
 			return err
 		}
+
+		source_language, err := cmd.Flags().GetString("source")
+		if err != nil {
+			return err
+		}
+
 		text := strings.Join(args, " ")
 
-		t, err := deepl.Translate(text, language, false)
+		t, err := deepl.Translate(text, target_language, source_language, false)
 		if err != nil {
 			return err
 		}
@@ -37,5 +43,6 @@ func Execute() {
 
 func init() {
 
-	rootCmd.Flags().StringP("language", "l", "ja", "Language to be translated ")
+	rootCmd.Flags().StringP("target", "t", "ja", "target language  ")
+	rootCmd.Flags().StringP("source", "s", "en", "source language  ")
 }

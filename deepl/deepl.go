@@ -29,12 +29,13 @@ var errorCode = map[int]string{
 	529: "Too many requests. Please wait and resend your request.",
 }
 
-func Translate(text string, target_language string, ispro bool) (string, error) {
+func Translate(text string, target_language string, source_language string, ispro bool) (string, error) {
 	URL := getURL(ispro)
 	key := url.Values{}
 	key.Add("auth_key", os.Getenv("DEEPL_TOKEN"))
 	key.Add("text", text)
 	key.Add("target_lang", target_language)
+	key.Add("source_lang", source_language)
 	resp, err := http.PostForm(URL, key)
 
 	if err != nil {
