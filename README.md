@@ -1,16 +1,17 @@
 # dt (DeepL Translation)
 
-A simple command line application to translate using deepl API.
+A simple command line application to translate using DeepL API.
+This application only support for DeepL API Free
 
 ## Installing
 
 ```bash
-go get -u github.com/kinpoko/dt
+go install github.com/kinpoko/dt@latest
 ```
 
 ## Usage
 
-1. Get authentication key for Deepl API. See [here](https://www.deepl.com/ja/docs-api/).
+1. Get authentication key for DeepL API. See [here](https://www.deepl.com/ja/docs-api/).
 2. Set the key as `DEEPL_TOKEN`.
 
 `.bashrc`
