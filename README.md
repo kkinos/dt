@@ -27,3 +27,16 @@ export DEEPL_TOKEN=<authentication key>
 dt Hello World
 ハロー・ワールド
 ```
+
+```bash
+dt -h
+A simple command line application to translate with deepl API.
+
+Usage:
+  dt [text] [flags]
+
+Flags:
+  -h, --help            help for dt
+  -s, --source string   source language   (default "en")
+  -t, --target string   target language   (default "ja")
+```
