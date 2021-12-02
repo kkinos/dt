@@ -1,6 +1,6 @@
 # dt (DeepL Translation)
 
-A simple command line application to translate using DeepL API.
+A simple command line application to translate with DeepL API.
 
 This application only support for DeepL API Free.
 
