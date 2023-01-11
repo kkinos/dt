@@ -1,5 +1,8 @@
 # dt (DeepL Translation)
 
+[![Go](https://github.com/kinpoko/dt/actions/workflows/go.yml/badge.svg)](https://github.com/kinpoko/dt/actions/workflows/go.yml)
+![License](https://img.shields.io/github/license/kinpoko/dt?color=blue)
+
 A simple command line application to translate with DeepL API.
 
 This application only support for DeepL API Free.
@@ -39,4 +42,12 @@ Flags:
   -h, --help            help for dt
   -s, --source string   source language   (default "en")
   -t, --target string   target language   (default "ja")
+```
+
+## Using Pipe
+
+e.g.
+
+```bash
+cat text.txt | xargs dt
 ```
